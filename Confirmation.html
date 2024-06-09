@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FixON Bikes - Confirmation</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+          body {
+            background-color: #f8f9fa;
+            font-family: 'Roboto Slab', serif;
+          }
+          header {
+            background-color: #6f42c1;
+            color: #fff;
+            padding: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          }
+          header h1 {
+            font-size: 2.5em;
+            font-family: 'Bebas Neue', cursive;
+          }
+          .navbar {
+            background-color: #fd7e14;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          }
+          .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-size: 1.1em;
+            font-family: 'Roboto Slab', serif;
+          }
+          .nav-link:hover {
+            background-color: #e95c20;
+            border-radius: 5px;
+          }
+          .container {
+            margin-top: 20px;
+          }
+          .footer {
+            background-color: #6f42c1;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Roboto Slab', serif;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- Header -->
+        <header class="container text-center py-3">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <img src="istockphoto-930454602-612x612.jpg" alt="Logo" class="img-fluid" />
+            </div>
+            <div class="col-md-8">
+              <h1 class="mb-0">FixON Bikes</h1>
+            </div>
+          </div>
+        </header>
+    
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">FixON Bikes</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">TEAM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="location.html">LOCATION</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <!-- Confirmation Section -->
+        <section class="container py-4">
+          <h2 class="text-center mb-4">Appointment Confirmed</h2>
+          <p class="text-center">Your reservation request has been received and confirmed. You will receive an email and message soon for your confirmation, thanks.</p>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center">Booking Details</h3>
+              <p class="text-center">Booking Number: <span id="bookingNumber"></span></p>
+              <p class="text-center">Time: <span id="bookingTime"></span></p>
+              <p class="text-center">Service: <span id="bookingService"></span></p>
+              <p class="text-center">Bike assistant: <span id="bookingExpert"></span></p>
+              <p class="text-center">Client Name: <span id="clientName"></span></p>
+              <p class="text-center">Client Email: <span id="clientEmail"></span></p>
+              <p class="text-center">Client Phone: <span id="clientPhone"></span></p>
+            </div>
+          </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="footer">
+          <p>&copy; 2024 FixON Bikes. All rights reserved.</p>
+        </footer>
+    
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+          $(function() {
+            const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails'));
+            const clientInfo = JSON.parse(localStorage.getItem('clientInfo'));
+    
+            $("#bookingNumber").text(Math.floor(Math.random() * 1000000));
+            $("#bookingTime").text(`${bookingDetails.date} at ${bookingDetails.time}`);
+            $("#bookingService").text(bookingDetails.service);
+            $("#bookingExpert").text(bookingDetails.expert);
+            $("#clientName").text(`${clientInfo.firstName} ${clientInfo.lastName}`);
+            $("#clientEmail").text(clientInfo.email);
+            $("#clientPhone").text(clientInfo.phone);
+          });
+        </script>
+      </body>
+    </html>
+    

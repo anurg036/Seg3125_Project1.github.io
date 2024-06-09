@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FixON Bikes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Roboto Slab', serif;
+      }
+      header {
+        background-color: #6f42c1;
+        color: #fff;
+        padding: 20px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      }
+      header h1 {
+        font-size: 2.5em;
+        font-family: 'Bebas Neue', cursive;
+      }
+      .navbar {
+        background-color: #fd7e14;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand, .nav-link {
+        color: #fff !important;
+        font-size: 1.1em;
+        font-family: 'Roboto Slab', serif;
+      }
+      .nav-link:hover {
+        background-color: #e95c20;
+        border-radius: 5px;
+      }
+      .container {
+        margin-top: 20px;
+      }
+      .img-fluid {
+        border: 4px solid #fd7e14;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .img-fluid:hover {
+        transform: scale(1.05);
+      }
+      .btn-primary {
+        background-color: #6f42c1;
+        border-color: #6f42c1;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        font-family: 'Roboto Slab', serif;
+      }
+      .btn-primary:hover {
+        background-color: #5a339a;
+        border-color: #5a339a;
+      }
+      .footer {
+        background-color: #6f42c1;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+        font-family: 'Roboto Slab', serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container text-center py-3">
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <img src="istockphoto-930454602-612x612.jpg" alt="Logo" class="img-fluid" />
+        </div>
+        <div class="col-md-8">
+          <h1 class="mb-0">FixON Bikes</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">FixON Bikes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">LOCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">BOOK</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Images Section -->
+    <section class="container py-4">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img
+            src="mechanic-repairing-bicycle-rear-wheel-royalty-free-image-1639089773.jpg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="360_F_380873937_pjPML5kCCMFbjL6cSKVNl05GdclKlRkQ.jpg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="f0164535-800px-wm.jpg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img
+            src="istockphoto-1143317242-170667a.jpeg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="mechanic-using-a-wrench-and-socket-on-motorcycle-in-garage-maintenance-repair-motorcycle-concept-selective-focus-photo.jpg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="depositphotos_364380422-stock-photo-guy-repairing-bicycle-bicycle-workshop.jpg"
+            alt="Image of repaired bike"
+            class="img-fluid mb-3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Button -->
+    <div class="container text-center py-4">
+      <a href="booking.html" class="btn btn-primary btn-lg">Book Now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 FixON Bikes. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
